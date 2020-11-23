@@ -23,11 +23,15 @@ body {
 }
 
 .info {
-
+	@include media('>=tablet') {
+		display: flex;
+		margin-bottom: 100px;
+	}
 }
 
 .box {
 	margin-bottom: 20px;
+	padding: 0 20px;
 
 	h3 {
 		font-weight: 400;
@@ -41,6 +45,8 @@ body {
 	}
 
 	a {	
+		font-family: 'Proxima Nova';
+		font-weight: 400;
 		color: #00aeef;
 		text-decoration: none;
 		transition: color .3s;
@@ -52,6 +58,11 @@ body {
 		&::after {
 			content: ' →';
 		}
+	}
+
+	@include media ('>=tablet') {
+		width: 25%;
+
 	}
 }
 

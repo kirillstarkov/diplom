@@ -743,11 +743,19 @@ a:hover {
   top: calc(50px + 15%);
   right: 5%;
 }
+@media (min-width: 768px) {
+  .card {
+    display: flex;
+  }
+  .card.row-reverse {
+    flex-direction: row-reverse;
+  }
+}
 
 .card-img {
-  width: 100%;
   position: relative;
   color: #fd634e;
+  background-size: cover;
 }
 .card-img .clrwhite {
   color: #fff;
@@ -794,15 +802,23 @@ a:hover {
 .card-img .status i {
   font-size: 20px;
 }
+@media (min-width: 768px) {
+  .card-img {
+    flex-grow: 3;
+    height: auto;
+    min-width: 60%;
+  }
+}
 
 .card-text {
-  padding: 50px;
+  padding: 50px 20px;
   background-color: #fff;
   text-align: left;
   position: relative;
   color: #656e74;
 }
 .card-text .hdr {
+  margin-top: 0;
   color: #fd634e;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
@@ -840,6 +856,37 @@ a:hover {
 .card-text.green h2 {
   color: #fff;
 }
+@media (min-width: 768px) {
+  .card-text {
+    flex-grow: 1;
+    min-width: 25%;
+  }
+}
+
+@media (min-width: 768px) {
+  .row {
+    display: flex;
+  }
+  .row .card {
+    display: block;
+  }
+  .row img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 768px) {
+  .row .card-1 {
+    flex-grow: 1;
+    min-width: 25%;
+  }
+}
+@media (min-width: 768px) {
+  .row .card-2 {
+    flex-grow: 1;
+    min-width: 60%;
+  }
+}
 
 .wrapper {
   overflow: hidden;
@@ -860,8 +907,16 @@ a:hover {
   background-color: #fd634e;
 }
 
+@media (min-width: 768px) {
+  .info {
+    display: flex;
+    margin-bottom: 100px;
+  }
+}
+
 .box {
   margin-bottom: 20px;
+  padding: 0 20px;
 }
 .box h3 {
   font-weight: 400;
@@ -873,6 +928,8 @@ a:hover {
   font-size: 40px;
 }
 .box a {
+  font-family: "Proxima Nova";
+  font-weight: 400;
   color: #00aeef;
   text-decoration: none;
   transition: color 0.3s;
@@ -882,6 +939,11 @@ a:hover {
 }
 .box a::after {
   content: " →";
+}
+@media (min-width: 768px) {
+  .box {
+    width: 25%;
+  }
 }
 
 .form-group {
