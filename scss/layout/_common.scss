@@ -1,0 +1,88 @@
+// пример использования media (breakpoints в верху файла)
+body {
+	
+}
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.bggreen {
+	background-color: $olive;
+}
+
+.bgcoral {
+	background-color: $coral;
+}
+
+.info {
+
+}
+
+.box {
+	margin-bottom: 20px;
+
+	h3 {
+		font-weight: 400;
+		color: #0a1f3f;
+		margin-top: 23px;
+		margin-bottom: 32px;
+	}
+
+	i {
+		font-size: 40px;
+	}
+
+	a {	
+		color: #00aeef;
+		text-decoration: none;
+		transition: color .3s;
+
+		&:hover {
+			color: darken(#00aeef, 15%);
+		}
+
+		&::after {
+			content: ' →';
+		}
+	}
+}
+
+
+// Обертка для полей формы
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+// Поля формы
+
+.form-control {
+	display: block;
+	width: 100%;
+	padding: 10px 15px;
+}
+
+.form-control {
+	@include placeholder {
+		color: $red;
+	}
+
+	&:focus {
+		border-color: $yellow;
+	}
+}
+
+.grid {
+	img {
+		display: block;
+		width: 100%;
+	}
+}

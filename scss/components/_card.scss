@@ -1,0 +1,131 @@
+.card {
+
+	.icon-side {
+		position: absolute;
+		font-size: 32px;
+		top: calc(50px + 15%);
+		right: 5%;
+	}
+}
+
+.card-img {
+	width: 100%;
+	position: relative;
+	color: $coral;
+
+	.clrwhite {
+		color: $white;
+	}
+
+	.overlay {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		bottom: 10%;
+
+		p {
+			margin-right: 4px;
+			margin-bottom: 0;
+		}
+
+		&.right {
+			right: 5%;
+		}
+
+		&.left {
+			left: 5%;
+		}
+
+		i {
+			font-size: 30px;
+		}
+	}
+
+	.status {
+		color: $white;
+		text-transform: uppercase;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+		padding: 0 20px;
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		top: 10%;
+		width: 100%;
+
+		div {
+			display: flex;
+			align-items: center;
+
+		}
+
+		p {
+			margin-right: 8px;
+			margin-bottom: 0;
+		}
+
+		i {
+			font-size: 20px;
+		}
+	}
+
+}
+
+.card-text {
+	padding: 50px;
+	background-color: $white;
+	text-align: left;
+	position: relative;
+	color: #656e74;
+
+	.hdr {
+		color: $coral;
+		text-transform: uppercase;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+	}
+
+	h1, h2 {
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+
+	h2 {
+		color: $olive;
+	}
+
+	p {
+		margin-top: 25px;
+	}
+
+	a {
+		color: $olive;
+		text-decoration: underline;
+		transition: color .4s;
+
+		&:hover {
+			color: darken($olive, 15%);
+			text-decoration: none;
+		}
+	}
+
+
+	&.center{
+		text-align: center;
+	}
+
+	&.green {
+		background-color: $olive;
+		color: $white;
+		
+		.hdr {
+			color: $white;
+		}
+
+		h2 {
+			color: $white;
+		}
+	}
+}
+
+
