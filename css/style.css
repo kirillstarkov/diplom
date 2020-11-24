@@ -906,6 +906,12 @@ a:hover {
   }
 }
 
+.intro {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
 .wrapper {
   overflow: hidden;
   position: relative;
@@ -925,15 +931,19 @@ a:hover {
   background-color: #fd634e;
 }
 
+.info {
+  padding-top: 80px;
+}
 @media (min-width: 768px) {
   .info {
+    padding-top: 100px;
     display: flex;
     margin-bottom: 100px;
   }
 }
 
 .box {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 0 20px;
 }
 .box h3 {
@@ -997,4 +1007,131 @@ a:hover {
 .grid img {
   display: block;
   width: 100%;
+}
+
+.header {
+  position: absolute;
+  z-index: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.header .logo {
+  display: block;
+  width: 150px;
+}
+@media (max-width: 767px) {
+  .header nav {
+    position: absolute;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    padding: 75px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu-opener {
+  display: inline-block;
+  vertical-align: top;
+  width: 40px;
+  height: 40px;
+  background-color: #a2ca28;
+  position: relative;
+  border-radius: 3px;
+}
+@media (min-width: 768px) {
+  .menu-opener {
+    display: none;
+  }
+}
+.menu-opener span, .menu-opener::before, .menu-opener::after {
+  background: #fff;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  right: 25%;
+  height: 4px;
+  margin-top: -2px;
+  transition: all 0.3s linear;
+}
+.menu-opener::before, .menu-opener::after {
+  content: "";
+  top: 30%;
+}
+.menu-opener::after {
+  top: 70%;
+}
+.burger .menu-opener span {
+  opacity: 0;
+}
+.burger .menu-opener::after, .burger .menu-opener::before {
+  transform: rotate(45deg);
+  top: 50%;
+  left: 15%;
+  right: 15%;
+}
+.burger .menu-opener::after {
+  transform: rotate(-45deg);
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  transform: scale(0.9);
+  opacity: 0;
+  visibility: hidden;
+  transform: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.burger .menu {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+.menu .active a {
+  border-bottom: 5px #fd634e solid;
+  color: #b7db4a;
+}
+@media (min-width: 768px) {
+  .menu li {
+    margin-right: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .menu li {
+    margin-right: 60px;
+  }
+}
+.menu a {
+  text-decoration: none;
+  font-family: "Avenir Next Rounded Std";
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  display: block;
+  padding: 5px 0;
+  transition: color 0.5s, border-bottom 0.3s;
+}
+.menu a:hover {
+  border-bottom: 5px #fd634e solid;
+  color: #b7db4a;
+}
+@media (min-width: 768px) {
+  .menu {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    position: static;
+  }
 }

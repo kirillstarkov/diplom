@@ -3,6 +3,13 @@ body {
 	
 }
 
+.intro {
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+
+}
+
 .wrapper {
 	overflow: hidden;
 	position: relative;
@@ -23,14 +30,17 @@ body {
 }
 
 .info {
+	padding-top: 80px;
+
 	@include media('>=tablet') {
+		padding-top: 100px;
 		display: flex;
 		margin-bottom: 100px;
 	}
 }
 
 .box {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	padding: 0 20px;
 
 	h3 {
