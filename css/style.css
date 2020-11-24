@@ -743,6 +743,9 @@ a:hover {
   top: calc(50px + 15%);
   right: 5%;
 }
+.card:hover .card-text {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
 @media (min-width: 768px) {
   .card {
     display: flex;
@@ -818,6 +821,7 @@ a:hover {
   text-align: left;
   position: relative;
   color: #656e74;
+  transition: box-shadow 0.5s;
 }
 .card-text .hdr {
   margin-top: 0;
@@ -862,9 +866,14 @@ a:hover {
   .card-text {
     flex-grow: 1;
     min-width: 25%;
+    min-height: 50%;
+    padding: 50px 30px;
   }
 }
 
+.row .card-img {
+  height: auto;
+}
 @media (min-width: 768px) {
   .row {
     display: flex;
@@ -874,7 +883,14 @@ a:hover {
   }
   .row img {
     width: 100%;
+    height: 330px;
     object-fit: cover;
+  }
+  .row .bgwhite {
+    background-color: #fff;
+  }
+  .row .bgolive {
+    background-color: #a2ca28;
   }
 }
 @media (min-width: 768px) {

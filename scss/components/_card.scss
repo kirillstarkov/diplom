@@ -7,6 +7,12 @@
 		right: 5%;
 	}
 
+	&:hover {
+		.card-text {
+			box-shadow: 0 0 20px rgba($black, .5);
+		}
+	}
+
 	@include media('>=tablet') {
 		display: flex;
 
@@ -94,6 +100,7 @@
 	text-align: left;
 	position: relative;
 	color: #656e74;
+	transition: box-shadow .5s;
 
 
 	.hdr {
@@ -149,10 +156,17 @@
 	@include media('>=tablet') {
 		flex-grow: 1;
 		min-width: 25%;
+		min-height: 50%;
+		padding: 50px 30px;
 	}
 }
 
 .row {
+
+	.card-img {
+		height: auto;
+	}
+
 	@include media('>=tablet') {
 		display: flex;
 
@@ -162,8 +176,18 @@
 
 		img {
 			width: 100%;
+			height: 330px;
 			object-fit: cover;
 		}
+
+		.bgwhite {
+			background-color: $white;
+		}
+
+		.bgolive {
+			background-color: $olive;
+		}
+
 	}
 
 	.card-1 {
