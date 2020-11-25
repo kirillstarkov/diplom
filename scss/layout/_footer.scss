@@ -12,6 +12,10 @@
 		}
 	}
 
+	.box {
+		margin: 0 5px;
+	}
+
 	.box:first-child {
 		@include media('>=tablet') {
 			width: 25%;

@@ -8,6 +8,23 @@ body {
 	height: 100vh;
 	background-size: cover;
 	background-position: 50% 0;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		right: 0;
+		height: 100px;
+		background-color: rgba($coral, .3);
+		transform: skewY(-4deg);
+
+		@include media('>=tablet') {
+			height: 200px;
+			bottom: -80px;
+		}
+	}
 
 }
 
@@ -49,9 +66,67 @@ body {
 }
 
 .outro {
+	position: relative;
 	min-height: 90vh;
 	background-size: cover;
 	background-position: 50% 0;
+	overflow: hidden;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		right: 0;
+		height: 100px;
+		background-color: #0d1119;
+
+		@include media('>=tablet') {
+			height: 150px;
+			bottom: -80px;
+		}
+	}
+
+	&::before{
+		transform: skewY(-4deg);
+	}
+
+	&::after{
+		transform: skewY(4deg);
+	}
+
+	span {
+		position: absolute;
+		z-index: 2;
+		bottom: -70px;
+		left: 0;
+		right: 0;
+		height: 80px;
+		background-color: $coral;
+		transform: skewY(2deg);
+	}
+
+	.outro-text {
+		color: $white;
+		padding: 10px 20px;
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		top: 120px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		h1 {
+			font-size: 45px;
+			font-weight: 400;
+		}
+
+		@include media ('>=tablet') {
+			padding: 20px 40px;
+			top: 200px;
+		}
+	}
 }
 
 .wrapper {
