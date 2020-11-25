@@ -687,7 +687,9 @@ a:hover {
 }
 .btn {
   transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   vertical-align: middle;
   padding: 10px 20px;
   border-radius: 3px;
@@ -696,9 +698,12 @@ a:hover {
   background-color: #a2ca28;
   color: #fff;
 }
+.btn i {
+  margin-left: 5px;
+}
 @media (min-width: 768px) {
   .btn {
-    padding: 0;
+    padding: 15px 20px;
   }
 }
 .btn:hover {

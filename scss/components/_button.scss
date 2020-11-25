@@ -2,7 +2,9 @@
 
 .btn {
 	transition: color .3s ease-in-out, border-color .3s ease-in-out, background-color .3s ease-in-out;
-	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	vertical-align: middle;
 	padding: 10px 20px;
 	border-radius: 3px;
@@ -11,8 +13,12 @@
 	background-color: $olive;
 	color: $white;
 
+	i {
+		margin-left: 5px;
+	}
+
 	@include media('>=tablet') {
-		padding: 0;
+		padding: 15px 20px;
 	}
 
 
