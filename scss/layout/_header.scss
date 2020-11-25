@@ -13,9 +13,18 @@
 		width: 150px;
 	}
 
-	nav {
+	.mobile-menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0;
+
 		@include media ('<tablet') {
-			position: absolute;
+			width: 100%;
+		}
+
+		@include media ('>=tablet') {
+			display: block;
 		}
 	}
 
@@ -141,7 +150,14 @@
 	}
 
 	@include media ('<tablet') {
+		a {
+		background-color: rgba($olive-dark, .9);
+		transition: background-color .3s;
 
+		&:hover {
+			background-color: darken($olive, 25%);
+		}
+		}
 	}
 
 }

@@ -6,8 +6,14 @@ body {
 .intro {
 	height: 100vh;
 	background-size: cover;
-	background-position: center;
+	background-position: 50% 0;
 
+}
+
+.outro {
+	min-height: 90vh;
+	background-size: cover;
+	background-position: 50% 0;
 }
 
 .wrapper {
@@ -23,6 +29,10 @@ body {
 
 .bggreen {
 	background-color: $olive;
+
+		div:nth-child(2n) {
+			flex-direction: row-reverse;
+			}
 }
 
 .bgcoral {
@@ -37,9 +47,8 @@ body {
 		display: flex;
 		margin-bottom: 100px;
 	}
-}
 
-.box {
+	.box {
 	margin-bottom: 30px;
 	padding: 0 20px;
 
@@ -73,8 +82,12 @@ body {
 	@include media ('>=tablet') {
 		width: 25%;
 
+		}
 	}
 }
+
+
+
 
 
 // Обертка для полей формы
