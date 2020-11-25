@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('../fonts/icomoon.ttf?tg02qc') format('truetype'),
-    url('../fonts/icomoon.woff?tg02qc') format('woff'),
-    url('../fonts/icomoon.svg?tg02qc#icomoon') format('svg');
+    url('../fonts/icomoon.ttf?s67rf4') format('truetype'),
+    url('../fonts/icomoon.woff?s67rf4') format('woff'),
+    url('../fonts/icomoon.svg?s67rf4#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -61,6 +61,9 @@
 .icon-shape:before {
   content: "\e909";
   color: #e3e9ea;
+}
+.icon-circle-right:before {
+  content: "\ea42";
 }
 .icon-facebook:before {
   content: "\ea90";
