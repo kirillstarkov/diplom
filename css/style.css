@@ -737,9 +737,6 @@ a:hover {
   width: 100%;
 }
 
-.card {
-  height: 100%;
-}
 .card .icon-side {
   position: absolute;
   font-size: 32px;
@@ -877,17 +874,12 @@ a:hover {
     display: flex;
   }
   .row .card {
-    display: block;
-    height: 100%;
+    display: flex;
+    height: auto;
+    flex-direction: column;
   }
   .row .card-img {
-    height: 400px;
-  }
-  .row .bgwhite {
-    background-color: #fff;
-  }
-  .row .bgolive {
-    background-color: #a2ca28;
+    min-height: 400px;
   }
 }
 @media (min-width: 768px) {

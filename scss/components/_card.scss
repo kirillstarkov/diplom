@@ -1,7 +1,5 @@
 .card {
 
-	height: 100%;
-
 	.icon-side {
 		position: absolute;
 		font-size: 32px;
@@ -166,20 +164,14 @@
 		display: flex;
 
 		.card {
-			display: block;
-			height: 100%;
+			display: flex;
+			height: auto;
+			flex-direction: column;
+
 		}
 
 		.card-img {
-		height: 400px;
-		}
-
-		.bgwhite {
-			background-color: $white;
-		}
-
-		.bgolive {
-			background-color: $olive;
+			min-height: 400px;
 		}
 
 	}
